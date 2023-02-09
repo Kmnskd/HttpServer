@@ -1,4 +1,4 @@
-package com.haier.safeCheck
+package HttpServer
 
 import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
