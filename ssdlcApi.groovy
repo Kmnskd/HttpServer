@@ -5,10 +5,10 @@ import groovy.json.JsonOutput
 
 class ssdlcApi {
     private HttpRequest httpRequest = new HttpRequest();
-    private String url = "http://xxx.xxx.xxx.xxx/api/ssdlc/v2/projects/test/openapi/jenkins/scanProject";
+    private String url = "http://xxx";
     private HashMap headers = ["Content-Type": "application/json", "openapi": "xxxx"];
     private HashMap params_data = [:];
-    private List toolType = ["codesec", "sca"];
+    private List toolType = ["xxx", "xxx"];
     private int pipelineBuildNumber = (int)((Math.random()*9+1)*100000);
 
     def createProject(branch, gitUrl, commitId, JOB_NAME, BUILD_NUMBER) {

@@ -6,7 +6,7 @@ import groovy.json.JsonSlurper
 class GetDemo{
     // 静态方法
     static String getRequest() {
-        def conn = new URL('http://xxx.xxx.xxx.xxx/sca/v1/projects?pageIndex=1&pageSize=50').openConnection()
+        def conn = new URL('http://xxx.xxx.xxx.xxx').openConnection()
         conn.setRequestMethod("GET")
         conn.setRequestProperty("Content-Type", "application/json")
         conn.setRequestProperty("Authorization", "BASIC-API:123456")
@@ -14,7 +14,7 @@ class GetDemo{
     }
 
     static String getProjectList() {
-        def result = new HttpRequest().getRequest("sourceCheck", "/projects?pageIndex=1&pageSize=50")
+        def result = new HttpRequest().getRequest("xxx", "/projects?pageIndex=1&pageSize=50")
         println("查询项目列表：");
         return result
     }
@@ -24,7 +24,7 @@ class GetDemo{
         def conn = new URL(url).openConnection()
         conn.setRequestMethod("POST")
         conn.setRequestProperty("Content-Type", "application/json")
-        conn.setRequestProperty("Authorization", "BASIC-API:bGl1Z2FuZ191aEBoYWllci5jb206MmE5YmMyMWE5NDk3NDA3MTg5OWM0YjYwMzI1MjY1YjI=")
+        conn.setRequestProperty("Authorization", "BASIC-API:xxx")
         println("data" + data)
         // 输出请求参数
         conn.doOutput = true
@@ -44,11 +44,11 @@ class GetDemo{
             """
         def response = httpRequest contentType: 'APPLICATION_JSON',
                 customHeaders: [
-                        [name: 'Authorization', value: 'BASIC-API:bGl1Z2FuZ191aEBoYWllci5jb206MmE5YmMyMWE5NDk3NDA3MTg5OWM0YjYwMzI1MjY1YjI=']
+                        [name: 'Authorization', value: 'BASIC-API:xxx']
                 ],
                 httpMode: 'POST',
                 requestBody: patchOrg,
-                url: "http://10.163.248.117:30000/sca/v1/projects/local"
+                url: "http://xxx"
         println("Status: "+response.status)
         println("Content: "+response.content)
     }

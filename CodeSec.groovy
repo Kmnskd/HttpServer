@@ -3,7 +3,7 @@ package HttpServer;
 
 class CodeSec {
     private HttpRequest httpRequest = new HttpRequest();
-    private String Platform = "codeSec";
+    private String Platform = "xxx";
 
 //    static void main(String[] args) {
 //        def s = new CodeSec();

@@ -11,10 +11,9 @@ class HttpRequest {
     private String gitlabToken = "xxx";
     private String url;
 
-    // sourceCheck相关信息
-    private String sourceCheck_CS_URL = "http://10.163.248.117:30000/sca/v1";
+    private String sourceCheck_CS_URL = "http://xxx";
     private String Token = "BASIC-API:xxxx";
-    private String projectUuid = "261877acbdd448d8b9983d020119375f";
+    private String projectUuid = "xxx";
     private String type = "1";
     private String protocol = "HTTPS";
     private String pullWay = "2";
@@ -22,8 +21,7 @@ class HttpRequest {
     private String gitlabApiVersion = "V4";
     private String gitLabHead = "https://git.net/";
 
-    // codeSec相关信息
-    private String codeSec_CS_URL = "http://xxx.xxx.xxx.xxx/cs/api/v2";
+    private String codeSec_CS_URL = "http://xxx.xxx.xxx.xxx";
     private String X_CS_TIMESTAMP = System.currentTimeMillis();
     private String ACCESSKEY = "xxx";
     private String ACCESS_SECRET = "xxx";
@@ -62,9 +60,9 @@ class HttpRequest {
     }
 
     private getHeader(Platform, signature=""){
-        if (Platform == "sourceCheck") {
+        if (Platform == "xxx") {
             headers["Authorization"] = Token
-        }else if (Platform == "codeSec") {
+        }else if (Platform == "xxx") {
             headers["accessKey"] = ACCESSKEY
             headers["x-cs-timestamp"] = X_CS_TIMESTAMP
             headers["x-cs-nonce"] = X_CS_NONCE
